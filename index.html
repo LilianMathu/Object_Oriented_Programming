@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Object Oriented Programming in Javascript
+    </title>
+    <meta charset="UTF-8">
+    </meta>
+    <script src="JS/script.js"></script>
+</head>
+
+<body>
+    <h3>Concepts of object oriented programming</h3>
+    <h4>Classes</h4>
+    <p>A class is a blueprint. Classes are created using the class keyword followed 
+        by a className whose first letter is capitalized.
+    </p>
+    <p>In ES6, a class is a type of a function.</p>
+    <p>The output of #console.log(typeOf className)# will give you a function. </p>
+    <p>In ES5, there were no classes. Classes in ES6 acts like constructor functions in ES6.</p>
+
+    <h4>Constructors</h4>
+    <p>To initialize information for a class instance (object) we do it in a constructor using the 
+       constructor keyword. 
+       You can pass arguments to the constructor like shown below:
+       <br>
+       Class Drone{
+        constructor(id, Name){
+            console.log(id +" " +name);
+        }
+       }
+       let drone = new Drone(1234 "Cool Drone");
+    </p>
+    <p>
+       Best practice is to reduce the operations in a constructor, only include the instance variables.
+       Instance variables are created in the constructor function in the class. The <b>this</b> keyword is used
+    to refer to the instance being created.
+    </p>
+
+
+    <h4>Objects</h4>
+    <p>
+        An onject is an instance of a class.
+        To create an object, the new keyword is used.<br>
+        let drone = new Drone.<br>
+        if you log out typeof drone, which is the name of the new object, the result is an object.
+    
+    </p>
+    <br>
+    <p>
+        After instanciating the variables with the this keyword in the constructor function, you can access
+        them using the dot notation or the bracket notation. In bracket notation <b>properties are accessed as strings.</b>
+   <br>
+    <p>
+        console.log("drone: " +drone.id +" " +drone.name);         //dot notation.
+        <br>
+        console.log("drone: " +drone['id'] +" " +drone['name']);   //bracket notation.
+
+    </p>
+    </p>
+    <br>
+
+    <h4>Instance variables (Properties) and Statis (class) properties</h4>
+    <p>
+        Instance variables are properties of a specific instance of the variable. Consider the code below  <br>
+        <br>
+        <b>
+    
+        let drone = new Drone(1234, "cool drone");
+        <br><br>
+        let drone1 = new Drone(4567, "awesome drone");
+         </b>
+
+    </p>
+    <p>
+        The values of drone and drone1 are instance variables. Each instance will have different 
+        instance variables.
+
+    </p>
+    <p>
+        However, we can have properties that are common to all drones, in addition to their instance properties.
+        These properties are referred to as the class or static properties.
+        <br>
+        Static properties are added after the closing class bracket.
+    </p>
+    <br>
+
+    <h4>Methods</h4>
+    <p>
+        In addition to having properties on classes, we can also add methods. 
+        A <b>method</b> is a function that gets attached to the instance.
+        <br><br>
+        <b>
+        fly(){                                                     <br>
+            console.log("Drone: " +this.id +" " +"is flying");         <br>
+        }                                                            <br>
+            <br>
+            <br>
+            ->fly is a method attached to each instance.
+        </b>
+        After creating the methods in the class body, you need to call them in an instance.
+        <br>
+
+      <b>fly.drone();</b> 
+    </p>
+    <br>
+    <b>NB: It is important to note that properties of an instance are accessed using the this keyword.</b>
+
+
+    <h4>Static methods</h4>
+    <p>
+        
+    </p>
+
+
+    
+
+</body>
+
+</html>
