@@ -7,11 +7,29 @@
     </title>
     <meta charset="UTF-8">
     </meta>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <script src="JS/script.js"></script>
 </head>
 
 <body>
+
+        <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="inheritance.html">Inheritance</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+              </div> 
+
+
+
     <h3>Concepts of object oriented programming</h3>
+    <h4>Modules</h4>
+    <p>
+        A module has its own namespace at the module level. They do not pollute the global space.
+    </p>
+
+
+
     <h4>Classes</h4>
     <p>A class is a blueprint. Classes are created using the class keyword followed 
         by a className whose first letter is capitalized.
@@ -20,9 +38,12 @@
     <p>The output of #console.log(typeOf className)# will give you a function. </p>
     <p>In ES5, there were no classes. Classes in ES6 acts like constructor functions in ES6.</p>
 
+
+
+
     <h4>Constructors</h4>
     <p>To initialize information for a class instance (object) we do it in a constructor using the 
-       constructor keyword. 
+       constructor keyword. Arguments in a constructor are used to initiate objects.
        You can pass arguments to the constructor like shown below:
        <br>
        Class Drone{
@@ -37,6 +58,9 @@
        Instance variables are created in the constructor function in the class. The <b>this</b> keyword is used
     to refer to the instance being created.
     </p>
+
+
+
 
 
     <h4>Objects</h4>
@@ -86,6 +110,11 @@
     </p>
     <br>
 
+
+
+
+
+
     <h4>Methods</h4>
     <p>
         In addition to having properties on classes, we can also add methods. 
@@ -108,13 +137,38 @@
     <b>NB: It is important to note that properties of an instance are accessed using the this keyword.</b>
 
 
+
+
+
     <h4>Static methods</h4>
     <p>
-        
+        The <b>static</b> keyword defines a static method for a class. 
+        Static methods aren't called on instances of the class. 
+        Instead, they're called on the class itself. These are often utility functions, 
+        such as functions to create or clone objects.   
+        <br>
+        <br>
+        class Drone{                                  <br>
+            static getCompany(){                      <br>
+                console.log("in my company");         <br>
+            }                                         <br>
+
+        }                                             <br>  
+        Drone.getCompany();                           <br>
     </p>
+<br>
 
 
-    
+
+
+<h4>Getters and setters</h4>
+<p>
+    Getters and setters can be used in a class. 
+    <br>
+    Private properties have an underscore character before the property name. For example <b>this._id = id</b>.
+    Getters and seters are used to create properties that look like functions.
+</p>
+<br>
 
 </body>
 

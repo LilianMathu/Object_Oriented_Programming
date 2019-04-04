@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Object Oriented Programming in Javascript
+    </title>
+    <meta charset="UTF-8">
+    </meta>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <script src="JS/inheritance.js"></script>
+</head>
+
+<body>
+
+        <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="inheritance.html">Inheritance</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+              </div> 
+
+<h4>Inheritance</h4>
+<p>
+    Inheritance refers to classes deriving functionalities from other classes. In inheritance, 
+    there an <b>abstact class</b> which contains all the common methods and properties. 
+    To inherit the common properties and methods, the extends keyword is used.
+    <br>
+    The inherited object contains all properties from its parent object. 
+    In addition, it will also specify its own set of unique properties.
+</p>
+
+
+
+<br>
+<h4>Extending a class</h4>
+A class is extended using the extends keyword. Since classes are objects, 
+every base class is an instance of the object prototype as shown by the method <b>instanceof</b>. 
+
+<p>
+
+</p>
+
+
+
+
+<br>
+<h4>Inheriting constructors</h4>
+<p>
+        super() which calls the constructor of the parent class. super()operator is actually the parent class constructor, passing it the necessary arguments of the Parent 
+        class constructor will also initialize the parent class properties in our sub-class, 
+        thereby inheriting it: <br>
+       <pre><code>
+                class Teacher extends Person {
+                    constructor(first, last, age, gender, interests, subject, grade) {
+                      super(first, last, age, gender, interests);
+                  
+                      // subject and grade are specific to Teacher
+                      this.subject = subject;
+                      this.grade = grade;
+                    }
+                  }
+        </code></pre> 
+    </p>
+    <p>
+        <b>NB</b>Super() must be included even if the abstract class does not have anything. 
+        It is included before the specifoc properties are added, that is, 
+        immediately after the declaration of the constructor.
+    </p>
+<p>
+    You can pass arguments to a constructor as shown in the code snippet above.
+</p>
+
+<br>
+<h4>Inheriting properties</h4>
+<p>
+    Inherited properties are included after the super keyword in the constructor's body. 
+    Extended classes can change the properties of the base class by defining new values for the properties.
+    
+
+</p>
+
+
+<br>
+<h4>Inheriting methods</h4>
+<p>
+
+</p>
+
+
+<br>
+<h4>Organizing classes</h4>
+</body>
+</html>

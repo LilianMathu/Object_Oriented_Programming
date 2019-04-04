@@ -4,12 +4,19 @@ class Drone{
     this.id = id;        //create a new instance with "this" then create a variable named id and assign it to the paramenters.
     this.name = name;
  }
+
+//static method
+ static getCompany(){   
+   console.log("in my company")                 
+  }    
+
+//instance method
  fly(){                                                    //creating a method in a class
     console.log("Drone: " +this.id +" " +"is flying");
  }
 
 }
-Drone.maxHeight = 2000;     //this is a static class
+Drone.maxHeight = 2000;     //this is a static property or class property
 
 
 //the following line will create an instance of the drone. 
@@ -34,3 +41,27 @@ let drone1 = new Drone(4567, "Awesome Drone")
    
     drone.fly();      //Methods are accessed when called at instance level
     drone1.fly();
+
+
+    Drone.getCompany();     //calling a static method. it is called using the class name
+
+
+
+
+    
+//getters and setters
+class Drone2{
+   constructor(id){
+      this._id = id;
+   }
+   get id(){
+      return this._id;          //return the value of the instance
+   }
+   set id(value){   
+      this._id = value;            //give the parameters of what you wnat to set
+   }
+}
+
+let drone3 = new Drone2('C1234');
+drone3.id = ('B9876');                 //this line will set the drone3 id
+console.log("drone id: " +this.id); //this will return the newly set drone3 id and the word Temporary
